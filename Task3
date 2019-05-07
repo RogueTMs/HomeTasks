@@ -4,3 +4,12 @@
 # Вывод:
 # Результат проверки
 
+
+In = [int(i) for i in input().split()]
+n = len(In)
+for i in range(n):
+    if In.count(In[i]) > 1:
+        print("Some number are not unique")
+        raise SystemExit
+
+print("All numbers are unique")
