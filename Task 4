@@ -1,0 +1,14 @@
+# 4. Дан список из N элементов.
+# Отсортировать список по сумме элементов.
+# Ввод:
+# 30 29 15 40
+# Вывод:
+# 30 40 15 29
+
+def sumsort(x):
+    return x // 10 + x % 10
+
+
+In = [int(i) for i in input().split()]
+n = len(In)
+print(sorted(In, key=sumsort))
