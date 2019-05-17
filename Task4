@@ -1,0 +1,26 @@
+print("Введите искомое число")
+z = int(input())
+print("Введите колличество строк")
+n = int(input())
+A = []
+a = 0
+flag = False
+for i in range(n):
+    A.append(list(map(int, input().split())))
+for j in range(n):
+    for s in range(len(A[j])):
+        if A[j][s] % 7 == 0 and A[j][s] > 1:
+            print(j, s)
+            flag = True
+            break
+    if flag:
+        break
+flag = False
+for j in reversed(range(n)):
+    for s in reversed(range(len(A[j]))):
+        if A[j][s] == z:
+            print(j, s)
+            flag = True
+            break
+    if flag:
+        break
