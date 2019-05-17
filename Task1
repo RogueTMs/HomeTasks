@@ -1,14 +1,15 @@
-# Ввод:
-#  Вводятся натуральные числа
-# Вывод:
-#  а) все элементы списка, являющиеся двузначными числами;
-#  б) все элементы списка, являющиеся трехзначными числами.
-
-
-In = [int(i) for i in input().split()]
-n = len(In)
-for i in range(n):
-    if In[i] > 9 < 100:
-        print(In[i])
-    elif In[i] > 99 < 1000:
-        print(In[i])
+L = [[0] * 7 for i in range(7)]
+for i in range(7):
+    for j in range(7):
+        if i <= 3:
+            if (j >= i) and (j <= 6 - i):
+                L[i][j] = 1
+            else:
+                L[i][j] = 0
+        else:
+            if (j <= i) and (j >= 6 - i):
+                L[i][j] = 1
+            else:
+                L[i][j] = 0
+        print("{:<3d}".format(L[i][j]), end="")
+    print()
