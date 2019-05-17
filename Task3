@@ -1,15 +1,7 @@
-# 3. В списке чисел из N рандомных элементов проверить,
-# все ли элементы являются уникальными,
-# т.е. каждое число встречается только один раз.
-# Вывод:
-# Результат проверки
-
-
-In = [int(i) for i in input().split()]
-n = len(In)
+print("Введите колличество строк")
+n = int(input())
+A = []
 for i in range(n):
-    if In.count(In[i]) > 1:
-        print("Some number are not unique")
-        raise SystemExit
-
-print("All numbers are unique")
+    A.append(list(map(int, input().split())))
+for j in range(n):
+    print(max(A[j]), min(A[j]))
